@@ -1,0 +1,320 @@
+/* ClickStore login/register modal styles */
+.auth-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(7, 11, 22, 0.72);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.auth-modal {
+  position: relative;
+  width: min(100%, 440px);
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  padding: 34px;
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  border-radius: 24px;
+  color: var(--text-primary, #f8fafc);
+  background: var(--surface, #111827);
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.42);
+  animation: authModalIn 180ms ease-out;
+}
+
+.auth-close {
+  position: absolute;
+  top: 13px;
+  right: 15px;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 50%;
+  color: inherit;
+  background: rgba(148, 163, 184, 0.13);
+  font-size: 25px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.auth-brand-mark {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 18px;
+  border-radius: 15px;
+  color: #fff;
+  background: linear-gradient(135deg, #7c3aed, #2563eb);
+  font-size: 25px;
+  font-weight: 800;
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.3);
+}
+
+.auth-eyebrow {
+  margin: 0 0 8px;
+  color: #a78bfa;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.auth-modal h2 {
+  margin: 0;
+  font-size: clamp(25px, 4vw, 30px);
+  letter-spacing: -0.04em;
+}
+
+.auth-subtitle {
+  margin: 9px 0 22px;
+  color: var(--text-secondary, #aab4c5);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.auth-mode-switch {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  padding: 5px;
+  margin-bottom: 22px;
+  border-radius: 13px;
+  background: rgba(148, 163, 184, 0.12);
+}
+
+.auth-mode-switch button {
+  min-height: 40px;
+  border: 0;
+  border-radius: 9px;
+  color: var(--text-secondary, #aab4c5);
+  background: transparent;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.auth-mode-switch button.active {
+  color: #fff;
+  background: linear-gradient(135deg, #7c3aed, #4f46e5);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+}
+
+.auth-form {
+  display: grid;
+  gap: 16px;
+}
+
+.auth-form label {
+  display: grid;
+  gap: 8px;
+  color: var(--text-primary, #f8fafc);
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.auth-form input {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 47px;
+  padding: 0 14px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 11px;
+  outline: none;
+  color: inherit;
+  background: rgba(148, 163, 184, 0.07);
+  font: inherit;
+  font-size: 14px;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.auth-form input:focus {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.17);
+}
+
+.auth-form input::placeholder {
+  color: #8490a3;
+}
+
+.auth-message {
+  margin: 0;
+  padding: 11px 12px;
+  border: 1px solid rgba(248, 113, 113, 0.25);
+  border-radius: 10px;
+  color: var(--text-primary, #f8fafc);
+  background: rgba(248, 113, 113, 0.09);
+  font-size: 13px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.auth-submit {
+  min-height: 49px;
+  margin-top: 2px;
+  border: 0;
+  border-radius: 12px;
+  color: #fff;
+  background: linear-gradient(135deg, #7c3aed, #4f46e5);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 750;
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(79, 70, 229, 0.22);
+  transition: transform 150ms ease, opacity 150ms ease;
+}
+
+.auth-submit:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.auth-submit:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.auth-secure-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin: 20px 0 0;
+  color: var(--text-secondary, #aab4c5);
+  font-size: 11px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.auth-secure-note span {
+  color: #34d399;
+  font-weight: 900;
+}
+
+.account-action {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  border: 0;
+  color: inherit;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+}
+
+@keyframes authModalIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-overlay {
+    padding: 12px;
+  }
+
+  .auth-modal {
+    padding: 27px 21px 22px;
+    border-radius: 20px;
+    max-height: calc(100vh - 24px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .auth-modal {
+    animation: none;
+  }
+}
+
+/* Fix login/register text visibility */
+.auth-modal {
+  color: #172033 !important;
+  background: #ffffff !important;
+}
+
+.auth-modal h2,
+.auth-form label {
+  color: #172033 !important;
+}
+
+.auth-subtitle,
+.auth-secure-note {
+  color: #64748b !important;
+}
+
+.auth-form input {
+  color: #172033 !important;
+  background: #ffffff !important;
+}
+
+.auth-form input::placeholder {
+  color: #64748b !important;
+}
+
+
+/* ===== ClickStore Auth Modal: Visibility Fix ===== */
+
+/* Form labels and general text */
+.auth-modal {
+  color: #172033 !important;
+}
+
+.auth-modal h1,
+.auth-modal h2,
+.auth-modal h3,
+.auth-modal label {
+  color: #172033 !important;
+}
+
+/* Input fields */
+.auth-modal input {
+  color: #172033 !important;
+  background-color: #ffffff !important;
+  border: 1px solid #cbd5e1 !important;
+}
+
+.auth-modal input::placeholder {
+  color: #64748b !important;
+  opacity: 1 !important;
+}
+
+/* Error and success messages */
+.auth-modal [role="alert"],
+.auth-modal .auth-message,
+.auth-modal .error-message,
+.auth-modal .success-message {
+  color: #b91c1c !important;
+  background-color: #fef2f2 !important;
+  border: 1px solid #fecaca !important;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+/* Helper and footer text */
+.auth-modal p,
+.auth-modal small {
+  color: #64748b;
+}
+
+/* Buttons */
+.auth-modal button {
+  cursor: pointer;
+}
+
+.auth-modal button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}

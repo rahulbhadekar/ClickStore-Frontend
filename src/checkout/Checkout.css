@@ -1,0 +1,106 @@
+
+.checkout-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 24px 60px;
+  color: var(--text-primary, #f5f7ff);
+}
+
+.checkout-back {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  margin-bottom: 24px;
+}
+
+.checkout-page h1 {
+  margin: 0;
+  font-size: clamp(28px, 4vw, 40px);
+}
+
+.checkout-subtitle {
+  color: var(--text-secondary, #a5b2cc);
+  margin-bottom: 28px;
+}
+
+.checkout-panel {
+  padding: 24px;
+  border: 1px solid #263750;
+  border-radius: 16px;
+  background: var(--card-bg, #101b2e);
+}
+
+.checkout-panel h2 {
+  margin-top: 0;
+}
+
+.checkout-address-list {
+  display: grid;
+  gap: 14px;
+}
+
+.checkout-address {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid #40506b;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.checkout-address input {
+  margin-top: 5px;
+  accent-color: #5378f5;
+}
+
+.checkout-address > span {
+  display: grid;
+  gap: 7px;
+  min-width: 0;
+}
+
+.checkout-address span span {
+  color: var(--text-secondary, #a5b2cc);
+  overflow-wrap: anywhere;
+}
+
+.checkout-default {
+  display: inline-block;
+  margin-left: 8px;
+  color: #8faaff;
+}
+
+.checkout-place-button {
+  width: 100%;
+  margin-top: 24px;
+  padding: 14px 18px;
+  border: 0;
+  border-radius: 9px;
+  background: linear-gradient(110deg, #2864f0, #7252f5);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.checkout-place-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.checkout-error {
+  margin: 16px 0;
+  color: #ff8c98;
+}
+
+@media (max-width: 600px) {
+  .checkout-page {
+    padding: 24px 16px;
+  }
+
+  .checkout-panel {
+    padding: 16px;
+  }
+}

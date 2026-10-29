@@ -1,0 +1,192 @@
+
+/* ===== ClickStore Seller Registration ===== */
+
+.seller-registration {
+  width: 100%;
+  max-width: 760px;
+  color: #172033;
+  font-family: inherit;
+  animation: sellerFadeIn 0.3s ease;
+}
+
+@keyframes sellerFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.seller-registration .account-eyebrow {
+  margin: 0 0 10px;
+  color: #6542f5;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.seller-registration > h1 {
+  margin: 0 0 8px;
+  color: #152238;
+  font-size: clamp(26px, 3vw, 34px);
+  font-weight: 750;
+  letter-spacing: -1px;
+  line-height: 1.25;
+}
+
+.seller-registration .account-description {
+  margin: 0 0 28px;
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* Store form / application card */
+
+.seller-registration .account-info-card {
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 22px;
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid #e7eaf2;
+  border-radius: 20px;
+  box-shadow: 0 8px 28px rgba(31, 41, 55, 0.035);
+}
+
+.seller-registration .account-info-card h2 {
+  margin: 0 0 22px;
+  color: #172033;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* Form */
+
+.seller-registration .profile-edit-form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+}
+
+.seller-registration .profile-edit-form label {
+  color: #334155;
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.seller-registration .profile-edit-form input {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 15px;
+  color: #172033;
+  background: #ffffff;
+  border: 1px solid #dbe1ec;
+  border-radius: 10px;
+  outline: none;
+  font: inherit;
+  font-size: 14px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.seller-registration .profile-edit-form input::placeholder {
+  color: #94a3b8;
+}
+
+.seller-registration .profile-edit-form input:focus {
+  border-color: #7048f5;
+  box-shadow: 0 0 0 4px rgba(112, 72, 245, 0.12);
+}
+
+/* Apply button */
+
+.seller-registration .profile-save-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 48px;
+  margin-top: 8px;
+  padding: 12px 20px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #7445f5, #5630df);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 5px 12px rgba(101, 66, 245, 0.18);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.seller-registration .profile-save-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(101, 66, 245, 0.28);
+}
+
+.seller-registration .profile-save-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Error message */
+
+.seller-registration .profile-error {
+  margin: 18px 0;
+  padding: 13px 15px;
+  color: #b42318;
+  background: #fff1f0;
+  border: 1px solid #ffd6d2;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Application status */
+
+.seller-registration .account-info-card > p {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.seller-registration .account-info-card strong {
+  color: #6542f5;
+  font-weight: 800;
+}
+
+.seller-registration .account-info-card h2 + p {
+  margin-top: 0;
+}
+
+@media (max-width: 600px) {
+  .seller-registration {
+    max-width: 100%;
+  }
+
+  .seller-registration .account-info-card {
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .seller-registration > h1 {
+    font-size: 27px;
+  }
+
+  .seller-registration .account-description {
+    font-size: 14px;
+  }
+}
